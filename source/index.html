@@ -5,43 +5,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUPERGYM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 <body class="page-body">
-  <!-- пример использования спрайта
-  <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-  <svg>
-    <use href="/__spritemap#sprite-user"></use>
-  </svg> -->
-  <header class="header">
-    <a class="header__logo">
-      <img src="/__spritemap#logo" width="130" height="26" alt="Лого Supergym">
-    </a>
-    <a class="header__link" href="tel:+78005555555">8 800 555-55-55</a>
-  </header>
+
+
   <main>
     <section class="hero" data-test="hero">
-      <h1 class="hero__title">Фитнес центр</h1>
-      <h2 class="hero__subtitle">Омск</h2>
-      <ul class="hero__description-list">
-        <li class="hero__description-item">Тренажерный зал</li>
-        <li class="hero__description-item">Групповые занятия</li>
-        <li class="hero__description-item">Кардиш-зона</li>
-      </ul>
+      <header class="hero__header header">
+        <div class="header__container">
+          <picture class="header__logo logo">
+            <source type="image/svg+xml" width="130" height="26" media="(min-width: 1366px)"
+              srcset="/__spritemap#sprite-logo-fitness-view">
+            <source type="image/svg+xml" width="110" height="22" media="(min-width: 768px)"
+              srcset="/__spritemap#sprite-logo-tablet-view">
+            <img class="logo__image" src="/__spritemap#sprite-logo-mobile-view" width="100" height="20"
+              alt="Лого Supergym">
+          </picture>
+          <a class="header__link" href="tel:+78005555555">8 800 555-55-55</a>
+        </div>
+      </header>
 
-      <button class="hero__button button" type="button">Купить абонемент</button>
+      <div class="hero__container">
+        <div class="hero__text-content">
+          <h1 class="hero__title">Фитнес центр</h1>
+          <h2 class="hero__subtitle">Омск</h2>
+          <ul class="hero__description-list">
+            <li class="hero__description-item">Тренажёрный зал</li>
+            <li class="hero__description-item">Групповые занятия</li>
+            <li class="hero__description-item">Кардио-зона</li>
+          </ul>
+          <button class="hero__button button button--white" type="button">Купить абонемент</button>
+        </div>
 
-      <picture class="hero__picture">
-        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
-          srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x">
-        <source type="image/webp" srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
-          srcset="img/hero-img-desktop@1x.jpeg 1x, img/hero-img-desktop@2x.jpeg 2x">
-        <img class="hero__image" width="324" height="390" src="img/hero-img-tablet@1x.jpeg"
-          srcset="img/hero-img-tablet@2x.jpeg 2x" alt="Подпись к картинке.">
-      </picture>
-
+        <picture class="hero__picture">
+          <source type="image/webp" media="(min-width: 1366px)" width="500" height="524"
+            srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1366px)" width="500" height="524"
+            srcset="img/hero-img-desktop@1x.jpeg 1x, img/hero-img-desktop@2x.jpeg 2x">
+          <img class="hero__image" width="324" height="390" src="img/hero-img-tablet@1x.jpeg"
+            srcset="img/hero-img-tablet@2x.jpeg 2x" alt="Подпись к картинке.">
+        </picture>
+      </div>
     </section>
 
     <section class="about" data-test="about">
@@ -50,102 +65,105 @@
         <h2 class="about__title">
           Тренажёрный зал
         </h2>
-        <p class="about__description">Просторный зал прощадью 900 кв/м</p>
+        <p class="about__description">Просторный зал площадью 900 кв/м</p>
         <div class="about__text-container">
-          <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела
-            и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.
+          <p>Supergym – самый большой фитнес центр за&nbsp;Уралом и идеальное место для укрепления тела
+            и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.
           </p>
-          <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами.
-            Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+          <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами.
+            Также в фитнес центре есть несколько оборудованных залов&nbsp;для различных видов групповых занятий.</p>
         </div>
       </div>
 
       <div class="about__right-column">
         <picture class="about__picture">
-          <source type="image/webp" media="(min-width: 1440px)" width="660" height="400"
+          <source type="image/webp" media="(min-width: 1366px)" width="660" height="400"
             srcset="img/about-img-desktop@1x.webp 1x, img/about-img-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" width="678" height="345"
             srcset="img/about-img-tablet@1x.webp 1x, img/about-img-tablet@2x.webp 2x">
           <source type="image/webp" width="320" height="280"
             srcset="img/about-img-mobile@1x.webp 1x, img/about-img-mobile@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 1440px)" width="660" height="400"
+          <source type="image/webp" media="(min-width: 1366px)" width="660" height="400"
             srcset="img/about-img-desktop@1x.jpeg 1x, img/about-img-desktop@2x.jpeg 2x">
           <source type="image/webp" media="(min-width: 768px)" width="678" height="345"
             srcset="img/about-img-tablet@1x.jpeg 1x, img/about-img-tablet@2x.jpeg 2x">
           <img class="about__image" width="320" height="280" src="img/about-img-mobile@1x.jpeg"
             srcset="img/about-img-mobile@2x.jpeg 2x" alt="Подпись к картинке.">
         </picture>
+
+        <div class="about__video"></div>
       </div>
 
     </section>
 
     <section class="price" data-test="price">
-      <h2 class="price__title">Абонементы</h2>
+      <div class="price__container">
+        <h2 class="price__title">Абонементы</h2>
 
-      <ul class="price__durations-list">
+        <ul class="price__durations-list">
 
-        <li class="price__duration-item">
-          <button class="price__duration-button" type="button">1 месяц</button>
-        </li>
+          <li class="price__duration-item">
+            <button class="price__duration-button price__duration-button--active" type="button">1 месяц</button>
+          </li>
 
-        <li class="price__duration-item">
-          <button class="price__duration-button" type="button">6 месяцев</button>
-        </li>
+          <li class="price__duration-item">
+            <button class="price__duration-button" type="button">6 месяцев</button>
+          </li>
 
-        <li class="price__duration-item">
-          <button class="price__duration-button" type="button">12 месяцев</button>
-        </li>
+          <li class="price__duration-item">
+            <button class="price__duration-button" type="button">12 месяцев</button>
+          </li>
 
-      </ul>
+        </ul>
 
-      <ul class="price__cards">
-        <li class="price__card">
-          <h3 class="price__card-title">
-            С тренером
-          </h3>
-          <p class="price__card-description">
-            12 занятий
-          </p>
-          <span class="price__card-price">
-            5000
-          </span>
-          <span class="hidden">
-            рублей
-          </span>
-          <button class="price__card-button button" type="button">Купить абонемент</button>
-        </li>
-        <li class="price__card">
-          <h3 class="price__card-title">
-            Дневной
-          </h3>
-          <p class="price__card-description">
-            с 8:00 до 17:00
-          </p>
-          <span class="price__card-price">
-            1700
-          </span>
-          <span class="hidden">
-            рублей
-          </span>
-          <button class="price__card-button button" type="button">Купить абонемент</button>
-        </li>
-        <li class="price__card">
-          <h3 class="price__card-title">
-            Полный день
-          </h3>
-          <p class="price__card-description">
-            с 8:00 до 22:00
-          </p>
-          <span class="price__card-price">
-            2700
-          </span>
-          <span class="hidden">
-            рублей
-          </span>
-          <button class="price__card-button button" type="button">Купить абонемент</button>
-        </li>
-      </ul>
-
+        <ul class="price__cards cards">
+          <li class="card">
+            <h3 class="card__title">
+              С тренером
+            </h3>
+            <p class="card__description">
+              12 занятий
+            </p>
+            <span class="card__price">
+              5000 &#8381;
+            </span>
+            <span class="visually-hidden">
+              рублей
+            </span>
+            <button class="card__button button" type="button">Купить абонемент</button>
+          </li>
+          <li class="card">
+            <h3 class="card__title">
+              Дневной
+            </h3>
+            <p class="card__description">
+              с 8:00 до 17:00
+            </p>
+            <span class="card__price card__price--day">
+              1700 &#8381;
+            </span>
+            <span class="visually-hidden">
+              рублей
+            </span>
+            <button class="card__button button" type="button">Купить абонемент</button>
+          </li>
+          <li class="card">
+            <h3 class="card__title">
+              Полный день
+            </h3>
+            <p class="card__description">
+              с 8:00 до 22:00
+            </p>
+            <span class="card__price card__price--full">
+              2700 &#8381;
+            </span>
+            <span class="visually-hidden">
+              рублей
+            </span>
+            <button class="card__button button" type="button">Купить абонемент</button>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="games" data-test="games">
@@ -178,14 +196,14 @@
       </div>
 
       <picture class="games__picture">
-        <source type="image/webp" media="(min-width: 1440px)" width="660" height="500"
+        <source type="image/webp" media="(min-width: 1366px)" width="660" height="500"
           srcset="img/games-desktop@1x.webp 1x, img/games-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)" width="378" height="348"
           srcset="img/games-tablet@1x.webp 1x, img/games-tablet@2x.webp 2x">
         <source type="image/webp" width="290" height="290"
           srcset="img/games-mobile@1x.webp 1x, img/games-mobile@2x.webp 2x">
 
-        <source type="image/webp" media="(min-width: 1440px)" width="660" height="500"
+        <source type="image/webp" media="(min-width: 1366px)" width="660" height="500"
           srcset="img/games-desktop@1x.jpeg 1x, img/games-desktop@2x.jpeg 2x">
         <source type="image/webp" media="(min-width: 768px)" width="378" height="348"
           srcset="img/games-tablet@1x.jpeg 1x, img/games-tablet@2x.jpeg 2x">
@@ -259,14 +277,14 @@
           </div>
 
           <picture class="offers__picture">
-            <source type="image/webp" media="(min-width: 1440px)" width="280" height="460"
+            <source type="image/webp" media="(min-width: 1366px)" width="280" height="460"
               srcset="img/girl-desktop@1x.webp 1x, img/girl-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" width="400" height="462"
               srcset="img/girl-tablet@1x.webp 1x, img/girl-tablet@2x.webp 2x">
             <source type="image/webp" width="320" height="360"
               srcset="img/girl-mobile@1x.webp 1x, img/girl-mobile@2x.webp 2x">
 
-            <source type="image/webp" media="(min-width: 1440px)" width="280" height="460"
+            <source type="image/webp" media="(min-width: 1366px)" width="280" height="460"
               srcset="img/girl-desktop@1x.jpeg 1x, img/girl-desktop@2x.jpeg 2x">
             <source type="image/webp" media="(min-width: 768px)" width="400" height="462"
               srcset="img/girl-tablet@1x.jpeg 1x, img/girl-tablet@2x.jpeg 2x">
@@ -373,10 +391,14 @@
 
   </main>
 
-  <section class="footer" data-test="footer">
-    <a class="footer__logo">
-      <img src="/__spritemap#logo" width="130" height="26" alt="Лого Supergym">
-    </a>
+  <footer class="footer" data-test="footer">
+    <picture class="footer__logo logo">
+      <source type="image/svg+xml" width="130" height="26" media="(min-width: 1366px)"
+        srcset="/__spritemap#sprite-logo-fitness-view">
+      <source type="image/svg+xml" width="110" height="22" media="(min-width: 768px)"
+        srcset="/__spritemap#sprite-logo-tablet-view">
+      <img class="logo__image" src="/__spritemap#sprite-logo-mobile-view" width="100" height="20" alt="Лого Supergym">
+    </picture>
     <nav class="footer__nav nav">
       <ul class="nav__list">
         <li class="nav__item">
@@ -408,7 +430,7 @@
 
       </li>
     </ul>
-  </section>
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 

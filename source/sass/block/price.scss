@@ -1,0 +1,104 @@
+.price {
+  position: relative;
+  background-color: $basic-bg;
+  z-index: 1;
+}
+
+.price::before {
+  position: absolute;
+  content: "";
+  width: 321px;
+  height: 384px;
+  right: -50px;
+  bottom: 10px;
+  background-image: url("../../img/price-bg@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transform: rotate(150deg);
+}
+
+@media (max-width: 767px) {
+  .price::before {
+    display: none;
+  }
+ }
+
+.price__container {
+  width: 1366px;
+  margin: 0 auto;
+  padding: 100px 103px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //todo
+  border: 1px solid black;
+  border-top: none;
+}
+
+@media (max-width: 1365px) {
+  .price__container {
+    width: 768px;
+    padding: 60px 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .price__container {
+    width: 320px;
+    padding: 40px 15px;
+  }
+}
+
+.price__title {
+  margin: 0 0 20px;
+  font-family: $font-second;
+  font-size: 54px;
+  line-height: 54px;
+  font-weight: 600;
+}
+
+@media (max-width: 1365px) {
+  .price__title {
+    margin: 0 0 35px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 767px) {
+  .price__title {
+    margin: 0 0 30px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.price__durations-list {
+  @include list-reset;
+  margin-bottom: 45px;
+  display: flex;
+  gap: 43px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.price__duration-button {
+  border: none;
+  padding: 0 0 10px;
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  opacity: 50%;
+
+  &--active {
+    opacity: 1;
+    border-bottom: 2px solid rgb(209, 10, 66);
+    margin-bottom: -2px;
+  }
+}
+
+.price__cards {
+  @include list-reset;
+}
+
