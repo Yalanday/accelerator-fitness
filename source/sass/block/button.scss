@@ -15,3 +15,10 @@
     color: $default-white;
   }
 }
+
+
+@media (max-width: 1365px) {
+  button {
+    font-size: $font-mini;
+  }
+}
