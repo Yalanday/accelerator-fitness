@@ -217,18 +217,21 @@
   }
 }
 
-.features__item {
-  &--center::after {
-    position: absolute;
-    content: "";
-    width: 320px;
-    height: 100%;
-    left: -15px;
-    background-color: $resulution-blue;
-    z-index: -1;
-
+@media (max-width: $mobile-width) {
+  .features__item {
+    &--center::after {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 100%;
+      left: -15px;
+      background-color: $resulution-blue;
+      z-index: -1;
+    }
   }
 }
+
+
 
 .features__item-title {
   grid-area: title;
@@ -298,7 +301,7 @@
     line-height: 22px;
     margin-top: -20px;
   }
- }
+}
 
 .features__item--center .features__item-description {
   color: $default-white;
